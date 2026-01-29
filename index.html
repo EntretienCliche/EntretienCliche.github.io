@@ -110,8 +110,8 @@
       line-height: 1.6;
     }
 
-    /* Cards reviews */
-    .review {
+    /* Cards Avis */
+    .Avis {
       border: 1px solid #e5e7eb;
       border-radius: 14px;
       padding: 14px;
@@ -119,7 +119,7 @@
       background: #fafafa;
     }
 
-    .review-top {
+    .Avis-top {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -127,7 +127,7 @@
       margin-bottom: 8px;
     }
 
-    .review-name {
+    .Avis-name {
       font-weight: bold;
     }
 
@@ -141,8 +141,8 @@
       }
       .nav { flex-direction: row; flex-wrap: wrap; }
     }
-	/* --- Reviews form (style pro) --- */
-.review-wrap {
+	/* --- Avis form (style pro) --- */
+.Avis-wrap {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 16px;
@@ -251,7 +251,7 @@
 }
 
 @media (max-width: 900px) {
-  .review-wrap { grid-template-columns: 1fr; }
+  .Avis-wrap { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
 }
   
@@ -274,7 +274,7 @@
       <div class="nav">
         <button class="nav-link active" data-page="home">Accueil</button>
         <button class="nav-link" data-page="services">Services</button>
-        <button class="nav-link" data-page="reviews">Reviews</button>
+        <button class="nav-link" data-page="Avis">Avis</button>
         <button class="nav-link" data-page="contact">Contact</button>
       </div>
     </aside>
@@ -316,11 +316,11 @@
 		  • Aide générale / homme à tout faire<br>
         </p>
       </section>
-<!-- PAGE 3 : Reviews -->
+<!-- PAGE 3 : Avis -->
       <section class="page" id="avis">
   <h1>Avis</h1>
 
-  <div class="review-wrap">
+  <div class="Avis-wrap">
     <!-- Colonne gauche : Formulaire -->
     <div class="panel">
       <h2>Laisser un avis</h2>
@@ -374,7 +374,7 @@
         <input type="hidden" name="source" value="Site - Avis clients">
 
         <!-- Redirection après envoi -->
-        <input type="hidden" name="_next" value=" https://entretiencliche.github.io/benjamincliche.github.io/#reviews">
+        <input type="hidden" name="_next" value=" https://entretiencliche.github.io/#Avis">
 
         <button class="btn-primary" type="submit">Envoyer mon avis</button>
 
@@ -398,17 +398,17 @@
       </p>
 
       <!-- Exemple d'avis affichés manuellement -->
-      <div class="review">
-        <div class="review-top">
-          <div class="review-name">Stéphanie B.H</div>
+      <div class="Avis">
+        <div class="Avis-top">
+          <div class="Nom avis">Stéphanie B.H</div>
           <div>★★★★★</div>
         </div>
         <p style="margin:0;">Je vous encourage chaudement à requérir les services de Benjamin. Il est rigoureux et consciencieux - un jeune homme de confiance. On faire appel à ses services depuis plusieurs mois et on est enchantés!</p>
       </div>
 		
-      <div class="review">
-        <div class="review-top">
-          <div class="review-name">Julia.M</div>
+      <div class="Avis">
+        <div class="Avis-top">
+          <div class="Nom Avis">Julia.M</div>
           <div>★★★★★</div>
         </div>
         <p style="margin:0;">Homme à tout faire sérieux et expérimenté, travaillant, respectueux, ponctuel et poli, disponible rapidement pour divers travaux avec un service soigné et fiable.</p>
@@ -457,6 +457,7 @@ if (goContactBtn) {
 
 </body>
 </html>
+
 
 
 
