@@ -181,31 +181,25 @@
       <!-- PAGE 2 : Reviews -->
       <section class="page" id="reviews">
         <h1>Reviews</h1>
-        <p>Voici quelques avis de clients :</p>
+        <form action="https://formspree.io/f/xxxxabcd" method="POST">
+  <label>Nom</label>
+  <input type="text" name="name" required>
 
-        <div class="review">
-          <div class="review-top">
-            <div class="review-name">Marie L.</div>
-            <div>★★★★★</div>
-          </div>
-          <p>Service super fiable, cour impeccable. Je recommande!</p>
-        </div>
+  <label>Note (1 à 5)</label>
+  <select name="rating" required>
+    <option value="5">★★★★★ (5)</option>
+    <option value="4">★★★★☆ (4)</option>
+    <option value="3">★★★☆☆ (3)</option>
+    <option value="2">★★☆☆☆ (2)</option>
+    <option value="1">★☆☆☆☆ (1)</option>
+  </select>
 
-        <div class="review">
-          <div class="review-top">
-            <div class="review-name">Alex P.</div>
-            <div>★★★★★</div>
-          </div>
-          <p>Très ponctuel et travail bien fait. Excellent rapport qualité/prix.</p>
-        </div>
+  <label>Avis</label>
+  <textarea name="message" required></textarea>
 
-        <div class="review">
-          <div class="review-top">
-            <div class="review-name">Sophie R.</div>
-            <div>★★★★☆</div>
-          </div>
-          <p>Très bon service, communication facile. Je vais reprendre l'été prochain.</p>
-        </div>
+  <button type="submit">Envoyer</button>
+</form>
+
       </section>
 
       <!-- PAGE 3 : Services -->
@@ -253,3 +247,4 @@
 
 </body>
 </html>
+
