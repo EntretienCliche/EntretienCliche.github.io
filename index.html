@@ -111,7 +111,7 @@
     }
 
     /* Cards Avis */
-    .Avis {
+    .review {
       border: 1px solid #e5e7eb;
       border-radius: 14px;
       padding: 14px;
@@ -119,7 +119,7 @@
       background: #fafafa;
     }
 
-    .Avis-top {
+    .review-top {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -127,7 +127,7 @@
       margin-bottom: 8px;
     }
 
-    .Avis-name {
+    .review-name {
       font-weight: bold;
     }
 
@@ -142,7 +142,7 @@
       .nav { flex-direction: row; flex-wrap: wrap; }
     }
 	/* --- Avis form (style pro) --- */
-.Avis-wrap {
+.review-wrap {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 16px;
@@ -251,7 +251,7 @@
 }
 
 @media (max-width: 900px) {
-  .Avis-wrap { grid-template-columns: 1fr; }
+  .review-wrap { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
 }
   
@@ -320,7 +320,7 @@
       <section class="page" id="Avis">
   <h1>Avis</h1>
 
-  <div class="Avis-wrap">
+  <div class="review-wrap">
     <!-- Colonne gauche : Formulaire -->
     <div class="panel">
       <h2>Laisser un avis</h2>
@@ -398,16 +398,16 @@
       </p>
 
       <!-- Exemple d'avis affichés manuellement -->
-      <div class="Avis">
-        <div class="Avis-top">
+      <div class="review">
+        <div class="review-top">
           <div class="Nom avis">Stéphanie B.H</div>
           <div>★★★★★</div>
         </div>
         <p style="margin:0;">Je vous encourage chaudement à requérir les services de Benjamin. Il est rigoureux et consciencieux - un jeune homme de confiance. On faire appel à ses services depuis plusieurs mois et on est enchantés!</p>
       </div>
 		
-      <div class="Avis">
-        <div class="Avis-top">
+      <div class="review">
+        <div class="review-top">
           <div class="Nom avis">Julia.M</div>
           <div>★★★★★</div>
         </div>
@@ -457,6 +457,7 @@ if (goContactBtn) {
 
 </body>
 </html>
+
 
 
 
