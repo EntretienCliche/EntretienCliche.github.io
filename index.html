@@ -254,6 +254,85 @@
   .review-wrap { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
 }
+	  /* --- Sections "qui remplissent" (services + contact) --- */
+.grid {
+  display: grid;
+  gap: 14px;
+}
+
+.grid-2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card {
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 16px;
+  background: #fafafa;
+}
+
+.card h2 {
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+}
+
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #d1d5db;
+  background: #fff;
+  padding: 10px 12px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.card p {
+  margin: 0;
+  color: #374151;
+  line-height: 1.6;
+}
+
+.action-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.btn-secondary {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 800;
+  background: #fff;
+  border: 1px solid #d1d5db;
+}
+
+.btn-secondary:hover {
+  background: #f3f4f6;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .grid-2, .grid-3 { grid-template-columns: 1fr; }
+  .action-row { grid-template-columns: 1fr; }
+}
+
   
   </style>
 </head>
@@ -297,25 +376,75 @@
          
         </p>
 		  <button class="btn-primary" id="goContact">Obtenir une estimation</button>
-<p class="help" style="margin-top:10px;">Réponse rapide — décris le travail et ta localisation.</p>
+<p class="help" style="margin-top:10px;">Spécifier le type de travail, la localisation et tout autre demande particulière</p>
 
       </section>
 
       <!-- PAGE 2 : Services -->
       <section class="page" id="services">
-        <h1>Services</h1>
-        <p>
-          • Entretien de terrain<br>
-          • Entretien de piscine<br>
-          • Désherbage<br>
-          • Tonte de gazon<br>
-          • Assemblage de meubles extérieurs / intérieurs<br>
-	      • Arrosage de plantes<br>
-		  • Aide au déménagement<br>
-		  • Aide avec déshivernisation / hivernisation du terrain <br>
-		  • Aide générale / homme à tout faire<br>
-        </p>
-      </section>
+  <h1>Services</h1>
+  <p class="help" style="margin-top:0;">
+    Voici les services les plus demandés. Écris-moi si tu as un projet spécial — je m’adapte facilement.
+  </p>
+
+  <div class="grid grid-3" style="margin-top:14px;">
+
+    <div class="card">
+      <h2>Entretien extérieur</h2>
+      <p>Tonte, désherbage, entretien de terrain, arrosage, aide saisonnière.</p>
+      <div class="badge-row">
+        <span class="badge">🌱 Désherbage</span>
+        <span class="badge">🌿 Tonte</span>
+        <span class="badge">💧 Arrosage</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Piscine</h2>
+      <p>Entretien de base, nettoyage, suivi simple (selon les besoins).</p>
+      <div class="badge-row">
+        <span class="badge">🏊 Nettoyage</span>
+        <span class="badge">🧪 Entretien</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Aide générale</h2>
+      <p>Petits travaux, assistance, déplacements, projets ponctuels.</p>
+      <div class="badge-row">
+        <span class="badge">🧰 Homme à tout faire</span>
+        <span class="badge">📦 Déménagement</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Mobilier</h2>
+      <p>Assemblage de meubles intérieurs et extérieurs.</p>
+      <div class="badge-row">
+        <span class="badge">🪑 Assemblage</span>
+        <span class="badge">🔧 Ajustements</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Saisons</h2>
+      <p>Déshivernisation / hivernisation (terrain et tâches connexes).</p>
+      <div class="badge-row">
+        <span class="badge">❄️ Hiver</span>
+        <span class="badge">☀️ Été</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Soumission rapide</h2>
+      <p>Décris le travail + ta localisation, et je te réponds rapidement.</p>
+      <button class="btn-primary" type="button" id="goContactFromServices">Me contacter</button>
+      <p class="help" style="margin:10px 0 0;">Clique pour aller à la page Contact.</p>
+    </div>
+
+  </div>
+</section>
+
 <!-- PAGE 3 :  -->
       <section class="page" id="avis">
   <h1>Avis</h1>
@@ -452,11 +581,20 @@ if (goContactBtn) {
     window.location.hash = "contact"; // optionnel: met #contact dans l'URL
   });
 }
+	  const goContactFromServices = document.getElementById("goContactFromServices");
+if (goContactFromServices) {
+  goContactFromServices.addEventListener("click", () => {
+    showPage("contact");
+    window.location.hash = "contact";
+  });
+}
+
 
   </script>
 
 </body>
 </html>
+
 
 
 
