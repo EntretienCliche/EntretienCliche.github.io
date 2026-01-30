@@ -333,7 +333,19 @@
   .action-row { grid-template-columns: 1fr; }
 }
 
-  
+  .action-row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.action-row a {
+  min-width: 180px;
+  text-align: center;
+}
+
   </style>
 </head>
 
@@ -647,6 +659,7 @@ if (goContactFromServices) {
 
 </body>
 </html>
+
 
 
 
